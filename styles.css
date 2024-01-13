@@ -1,0 +1,104 @@
+.bg {
+    background-color: black;
+}
+
+/*.gridbox {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 600px;
+    width: 1000px;
+}
+
+.namebox {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    height: 100px;
+    width: 100px;
+}
+
+.info {
+    font-family: monospace;
+    color: white;
+    padding: 10px;
+	text-align: end;
+    font-size: 30px;
+    font-weight: bold;
+}*/
+
+.gridbox {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background-color: black;
+    border: 0.5px solid white;
+    padding: 10px;
+    height: 600px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.gridbox > div {
+    background-color: black;
+    border: 0.5px solid white;
+    font-size: 30px;   
+}
+
+.mini {
+    border: 0.5px dotted white;
+    grid-template-rows: 2;
+    margin: 5px;
+}
+
+img {
+    grid-column: auto;
+    height: 200px;
+    
+}
+
+.pfp {
+    grid-row: 1;
+    width: 200px;
+    height: 200px;
+}
+
+.intro {
+    grid-column: 1 / span 6;
+}
+
+  
+.name{
+    grid-column: 2 / span 5;
+}
+
+
+
+.info {
+    font-family: monospace;
+    color: white;
+    padding: 10px;
+	text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.data {
+    font-family: monospace;
+    color: white;
+    padding: 10px;
+	text-align: start;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}

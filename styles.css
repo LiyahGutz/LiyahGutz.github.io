@@ -35,7 +35,7 @@ body {
 .student { grid-area: student; }
 .certificates { grid-area: certificates; }
 
-/* Larger/taller sections */
+/* Dynamic sizing */
 .about { grid-column: 1 / span 3; min-height: 150px; }
 .certificates { grid-row: span 2; }
 

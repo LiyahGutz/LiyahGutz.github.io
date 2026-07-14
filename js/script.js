@@ -1,20 +1,33 @@
-// Typewriter effect for glitch header
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".glitch");
-  const text = "[ ACCESSING DOSSIER... LOADING DATA ]";
-  header.textContent = "";
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  const messages = [
+    "[ INITIALIZING SYSTEM... ]",
+    "[ Scanning ports... ]",
+    "[ Decrypting file... ]",
+    "[ Bypassing firewall... ]",
+    "[ Injecting payload... ]",
+    "[ ACCESS GRANTED ]"
+  ];
+
+  const loadingText = document.querySelector(".loading-text");
   let i = 0;
+
   const interval = setInterval(() => {
-    header.textContent += text[i];
+    loadingText.textContent = messages[i];
     i++;
-    if (i === text.length) clearInterval(interval);
-  }, 100);
+    if (i === messages.length) {
+      clearInterval(interval);
+      loader.style.display = "none";
+      content.style.display = "block";
+    }
+  }, 1200);
 });
 
 // Matrix rain background
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
-
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 

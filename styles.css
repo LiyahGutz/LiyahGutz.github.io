@@ -1,82 +1,97 @@
 body {
-    background-color: #000;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
+  background-color: #0a0a0a;
+  font-family: 'Roboto', sans-serif;
+  color: #eaeaea;
 }
 
 .gridbox {
-    display: grid;
-    grid-template-areas:
-        "pfp dossier dossier dossier"
-        "name gen dob dob"
-        "about about about about"
-        "projects projects practicum practicum"
-        "experience experience student student"
-        "certificates certificates certificates certificates";
-    gap: 12px;
-    border: 2px solid white;
-    padding: 20px;
-    width: 1000px;
-    margin: auto;
-    background-color: #111;
+  display: grid;
+  grid-template-areas:
+    "pfp dossier dossier dossier"
+    "name gen dob dob"
+    "about about about about"
+    "projects projects practicum practicum"
+    "experience experience student student"
+    "certificates certificates certificates certificates";
+  gap: 12px;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0,255,204,0.5);
+  background-color: #111;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .box {
-    background-color: #000;
-    border: 1px solid white;
-    padding: 10px;
+  background-color: #000;
+  border: 1px solid #00ffcc;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
 }
+.box:hover { box-shadow: 0 0 10px rgba(0,255,204,0.7); }
 
 .dossier {
-    grid-area: dossier;
-    border-bottom: 4px solid white;
+  grid-area: dossier;
+  border-bottom: 3px solid #00ffcc;
+  text-align: center;
+  position: relative;
+}
+.dossier::after {
+  content: "CONFIDENTIAL";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 72px;
+  font-family: 'Courier New', monospace;
+  color: rgba(255,0,0,0.15);
+  pointer-events: none;
 }
 
 .id {
-    font-family: 'Courier New', monospace;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  color: #00ffcc;
 }
-
-.pfp { grid-area: pfp; text-align: center; }
-.name { grid-area: name; }
-.gen { grid-area: gen; }
-.dob { grid-area: dob; }
-.about { grid-area: about; }
-.projects { grid-area: projects; }
-.practicum { grid-area: practicum; }
-.experience { grid-area: experience; }
-.student { grid-area: student; }
-.certificates { grid-area: certificates; }
 
 .data {
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00ffcc;
+  margin-bottom: 8px;
+  color: #00ffcc;
 }
 
-.info {
-    font-size: 16px;
-    line-height: 1.4;
-}
+.info { font-size: 16px; line-height: 1.4; }
 
 .pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  border: 2px solid #00ffcc;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,255,204,0.7);
 }
 
-a {
-    color: #00ffcc;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
+/* 🔧 Responsive adjustments */
+@media (max-width: 768px) {
+  .gridbox {
+    grid-template-areas:
+      "dossier"
+      "pfp"
+      "name"
+      "gen"
+      "dob"
+      "about"
+      "projects"
+      "practicum"
+      "experience"
+      "student"
+      "certificates";
+  }
+  .pic { width: 120px; height: 120px; }
+  .id { font-size: 28px; }
 }

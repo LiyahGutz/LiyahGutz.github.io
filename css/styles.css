@@ -1,118 +1,69 @@
 body {
-  background-color: #0a0a0a;
-  font-family: 'Roboto', sans-serif;
-  color: #eaeaea;
+  background-color: #000;
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+  margin: 0;
+  overflow: hidden;
+}
+
+.terminal {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.glitch {
+  font-size: 28px;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #0f0;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
 }
 
 .gridbox {
   display: grid;
   grid-template-areas:
-    "pfp dossier dossier"
-    "name gen dob"
-    "about about about"
-    "projects practicum practicum"
-    "experience student certificates";
-  grid-template-columns: 1fr 1fr 1fr;
+    "pfp name gen dob"
+    "about about about about"
+    "projects practicum practicum practicum"
+    "experience student certificates certificates";
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
-  border: 2px solid #00ffcc;
-  box-shadow: 0 0 15px rgba(0,255,204,0.5);
-  background-color: #111;
+  z-index: 1;
 }
 
-/* Assign areas */
-.pfp { grid-area: pfp; text-align: center; }
-.dossier { grid-area: dossier; }
-.name { grid-area: name; }
-.gen { grid-area: gen; }
-.dob { grid-area: dob; }
-.about { grid-area: about; }
-.projects { grid-area: projects; }
-.practicum { grid-area: practicum; }
-.experience { grid-area: experience; }
-.student { grid-area: student; }
-.certificates { grid-area: certificates; }
-
-/* Dynamic sizing */
-.about { grid-column: 1 / span 3; min-height: 150px; }
-.certificates { grid-row: span 2; }
-
-/* Box styling */
 .box {
-  background-color: #000;
-  border: 1px solid #00ffcc;
+  border: 1px solid #00ff00;
   padding: 10px;
-  transition: box-shadow 0.3s ease;
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 0 0 10px #00ff00;
+  transition: transform 0.2s ease;
 }
-.box:hover { box-shadow: 0 0 10px rgba(0,255,204,0.7); }
-
-.dossier {
-  border-bottom: 3px solid #00ffcc;
-  text-align: center;
-  position: relative;
-}
-.dossier::after {
-  content: "CONFIDENTIAL";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg);
-  font-size: 72px;
-  font-family: 'Courier New', monospace;
-  color: rgba(255,0,0,0.15);
-  pointer-events: none;
-}
-
-.id {
-  font-family: 'Courier New', monospace;
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-  color: #00ffcc;
-}
+.box:hover { transform: scale(1.05); }
 
 .data {
-  font-family: 'Courier New', monospace;
-  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 2px solid #00ffcc;
+  border-bottom: 1px solid #00ff00;
   margin-bottom: 8px;
-  color: #00ffcc;
 }
 
-.info { font-size: 16px; line-height: 1.4; }
+.info { font-size: 14px; line-height: 1.4; }
 
 .pic {
-  width: 150px; height: 150px;
+  width: 120px; height: 120px;
   border-radius: 50%;
-  border: 2px solid #00ffcc;
+  border: 2px solid #00ff00;
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,255,204,0.7);
+  box-shadow: 0 0 10px #00ff00;
 }
 
-a { color: #ff4444; text-decoration: none; }
-a:hover { text-decoration: underline; color: #ff8888; }
-
-/* Responsive collapse */
-@media (max-width: 768px) {
-  .gridbox {
-    grid-template-areas:
-      "dossier"
-      "pfp"
-      "name"
-      "gen"
-      "dob"
-      "about"
-      "projects"
-      "practicum"
-      "experience"
-      "student"
-      "certificates";
-    grid-template-columns: 1fr;
-  }
-  .pic { width: 120px; height: 120px; }
-  .id { font-size: 28px; }
-}
+a { color: #00ff00; text-decoration: none; }
+a:hover { text-decoration: underline; }

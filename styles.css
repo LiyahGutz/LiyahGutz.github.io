@@ -104,3 +104,10 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }   
+
+.pic {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* circular headshot */
+    object-fit: cover;
+}

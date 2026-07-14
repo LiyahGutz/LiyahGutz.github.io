@@ -2,79 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aaliyah Gutierrez - Confidential Dossier</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Aaliyah Gutierrez - Hacker Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="gridbox">
+  <div class="terminal">
+    <h1 class="glitch">[ ACCESSING DOSSIER... ]</h1>
+    <div class="gridbox">
 
-    <!-- Header -->
-    <div class="dossier">
-      <p class="id">Confidential Portfolio Dossier</p>
+      <!-- Profile -->
+      <div class="box pfp">
+        <img src="myPic.jpg" alt="Profile Picture" class="pic">
+      </div>
+      <div class="box name"><p class="data">Name</p><p class="info">Gutierrez, Aaliyah N.</p></div>
+      <div class="box gen"><p class="data">Sex</p><p class="info">Female</p></div>
+      <div class="box dob"><p class="data">DOB</p><p class="info">12/04/2003</p></div>
+
+      <!-- Biography -->
+      <div class="box about">
+        <p class="data">About Me</p>
+        <p class="info">Computer Science graduate passionate about programming, creative problem-solving, and collaborative projects.</p>
+      </div>
+
+      <!-- Projects -->
+      <div class="box projects">
+        <p class="data">Projects</p>
+        <ul class="info">
+          <li>4 Pics 1 Word Game (<a href="#">GitHub</a>)</li>
+          <li>Vibe City Fight Game (<a href="#">GitHub</a>)</li>
+          <li>Finance Master Pitch Idea (<a href="#">GitHub</a>)</li>
+        </ul>
+      </div>
+
+      <!-- Practicum -->
+      <div class="box practicum">
+        <p class="data">Practicum</p>
+        <ul class="info">
+          <li>Software Development Intern – Python & Flask</li>
+          <li>Capstone Project – Student Information System</li>
+        </ul>
+      </div>
+
+      <!-- Experience -->
+      <div class="box experience">
+        <p class="data">Experience</p>
+        <ul class="info">
+          <li>Freelance Web Developer</li>
+          <li>Customer Service Assistant</li>
+        </ul>
+      </div>
+
+      <!-- Student Life -->
+      <div class="box student">
+        <p class="data">Student Life</p>
+        <ul class="info">
+          <li>Secretary – JPCS MMCL</li>
+          <li>Hackathon & Bootcamp participant</li>
+          <li>Poster Contest Winner</li>
+        </ul>
+      </div>
+
+      <!-- Certificates -->
+      <div class="box certificates">
+        <p class="data">Certificates</p>
+        <ul class="info">
+          <li>Python Programming – Coursera</li>
+          <li>AWS Cloud Practitioner – Amazon</li>
+          <li>Data Science Workshop – MMCL</li>
+        </ul>
+      </div>
+
     </div>
-
-    <!-- Profile -->
-    <div class="box pfp">
-      <img src="myPic.jpg" alt="Profile Picture" class="pic">
-    </div>
-    <div class="box name"><p class="data">Name</p><p class="info">Gutierrez, Aaliyah N.</p></div>
-    <div class="box gen"><p class="data">Sex</p><p class="info">Female</p></div>
-    <div class="box dob"><p class="data">Date of Birth</p><p class="info">12/04/2003</p></div>
-
-    <!-- About -->
-    <div class="box about">
-      <p class="data">About Me</p>
-      <p class="info">Computer Science graduate passionate about programming, creative problem-solving, and collaborative projects. Experienced in academic and practicum work, with strong adaptability and leadership skills.</p>
-    </div>
-
-    <!-- School Projects -->
-    <div class="box projects">
-      <p class="data">School Projects</p>
-      <ul class="info">
-        <li>4 Pics 1 Word Game (<a href="#">GitHub</a>)</li>
-        <li>Vibe City Fight Game (<a href="#">GitHub</a>)</li>
-        <li>Finance Master Pitch Idea (<a href="#">GitHub</a>)</li>
-      </ul>
-    </div>
-
-    <!-- Practicum -->
-    <div class="box practicum">
-      <p class="data">Practicum Experience</p>
-      <ul class="info">
-        <li>Software Development Intern – Python & Flask tools</li>
-        <li>Capstone Project – Student Information System</li>
-      </ul>
-    </div>
-
-    <!-- General Experience -->
-    <div class="box experience">
-      <p class="data">General Experience</p>
-      <ul class="info">
-        <li>Freelance Web Developer – Responsive websites</li>
-        <li>Customer Service Assistant – Communication & problem-solving</li>
-      </ul>
-    </div>
-
-    <!-- Student Life -->
-    <div class="box student">
-      <p class="data">Student Life</p>
-      <ul class="info">
-        <li>Secretary – JPCS MMCL</li>
-        <li>Hackathon & Bootcamp participant</li>
-        <li>Poster Making Contest Winner</li>
-      </ul>
-    </div>
-
-    <!-- Certificates -->
-    <div class="box certificates">
-      <p class="data">Certificates</p>
-      <ul class="info">
-        <li>Python Programming – Coursera</li>
-        <li>AWS Cloud Practitioner – Amazon</li>
-        <li>Data Science Workshop – MMCL</li>
-      </ul>
-    </div>
-
   </div>
+  <canvas id="matrix"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>

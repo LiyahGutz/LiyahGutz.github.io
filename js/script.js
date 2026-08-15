@@ -18,10 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingText.textContent = messages[i];
     i++;
     if (i === messages.length) {
-      clearInterval(interval);
-      loader.style.display = "none";
-      content.style.display = "block";
+        clearInterval(interval);
+
+        // Add glitch effect before hiding loader
+        loader.classList.add("glitching");
+
+        setTimeout(() => {
+            loader.style.transition = "opacity 0.8s ease";
+            loader.style.opacity = 0;
+            setTimeout(() => {
+            loader.style.display = "none";
+            content.style.display = "block";
+            }, 800);
+        }, 1200); // glitch duration
     }
+
+
   }, 1200);
 });
 

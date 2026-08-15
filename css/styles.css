@@ -27,8 +27,105 @@ body {
   to { opacity: 0.6; }
 }
 
-/* Terminal + glitch */
-.terminal { padding: 20px; text-align: center; position: relative; z-index: 1; }
+/* Window style */
+.window {
+  border: 2px solid #00ff00;
+  background-color: #000;
+  box-shadow: 0 0 15px #00ff00;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background-color: #001100;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 8px;
+  border-bottom: 1px solid #00ff00;
+  text-align: center;
+  font-weight: bold;
+}
+
+.window-body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 150px;
+  height: auto;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Typewriter text */
+.typewriter {
+  flex: 1;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* Center section container */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+/* Center menu buttons on index */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+.menu-btn {
+  font-family: 'Courier New', monospace;
+  font-size: 22px;
+  color: #00ff00;          /* neon green text */
+  background-color: #000;  /* black interior */
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;   /* ensures proper box rendering */
+  position: relative;      /* keeps them above canvas */
+  z-index: 2;              /* forces buttons above background */
+}
+
+
+.menu-btn:hover {
+  background-color: #00ff00;
+  color: #000;
+  transform: scale(1.1);
+}
+
+
+.section-box {
+  border: 1px solid #00ff00;
+  background-color: #000;   /* black interior */
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 10px #00ff00;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #00ff00;           /* neon green text */
+}
+
+
+/* Glitch effect */
 .glitch {
   position: relative;
   color: #00ff00;
@@ -46,46 +143,95 @@ body {
 .glitch::after { animation: glitchBottom 1.5s infinite linear alternate-reverse; }
 
 @keyframes glitchTop {
-  0% { clip: rect(0, 9999px, 0, 0); }
   25% { clip: rect(10px, 9999px, 40px, 0); transform: translate(-2px, -2px); }
   50% { clip: rect(85px, 9999px, 140px, 0); transform: translate(2px, 2px); }
-  75% { clip: rect(45px, 9999px, 80px, 0); transform: translate(-1px, 1px); }
-  100% { clip: rect(0, 9999px, 0, 0); }
 }
 @keyframes glitchBottom {
-  0% { clip: rect(0, 9999px, 0, 0); }
   25% { clip: rect(55px, 9999px, 90px, 0); transform: translate(2px, -1px); }
   50% { clip: rect(10px, 9999px, 40px, 0); transform: translate(-2px, 1px); }
-  75% { clip: rect(85px, 9999px, 140px, 0); transform: translate(1px, -2px); }
-  100% { clip: rect(0, 9999px, 0, 0); }
 }
 
 /* Matrix canvas */
-#matrix { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+#matrix {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;   /* background layer */
+}
 
-.menu {
+/* about page */
+.about-layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 40px;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.menu-btn {
-  font-family: 'Courier New', monospace;
-  font-size: 22px;
-  color: #00ff00;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1px solid #00ff00;
+.profile-pic {
+  width: 150px;
+  height: auto;
+  border: 2px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
-  transition: all 0.3s ease;
 }
 
-.menu-btn:hover {
-  background-color: #00ff00;
-  color: #000;
-  text-shadow: none;
-  transform: scale(1.1);
+.typewriter {
+  flex: 1;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
 }
+
+/* Loader glitch box */
+.glitch-box {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #0f0;
+  position: relative;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Loader glitch effect */
+.glitching {
+  animation: glitchScreen 1.2s steps(2, end) forwards;
+}
+
+@keyframes glitchScreen {
+  0% {
+    transform: none;
+    filter: none;
+  }
+  20% {
+    transform: skew(5deg);
+    filter: hue-rotate(90deg);
+  }
+  40% {
+    transform: translate(-5px, 3px);
+    filter: contrast(200%);
+  }
+  60% {
+    transform: translate(3px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  80% {
+    transform: skew(-5deg);
+    filter: contrast(150%);
+  }
+  100% {
+    transform: none;
+    filter: none;
+  }
+}
+
+
+

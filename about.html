@@ -2,32 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Hacker Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio - About Me</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="loader">
-        <div class="glitch-box">[ SYSTEM GLITCH... ]</div>
-    </div>
+  <div id="loader">
+    <pre class="loading-text">[ LOADING BIOGRAPHY FILE... ]</pre>
+  </div>
 
-
-    <div class="section-container">
-        <div class="window">
-            <div class="window-header">[ BIOGRAPHY FILE ]</div>
-            <div class="window-body">
-            <img src="myPic.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="typewriter">
-                <p id="about-text">
-                Computer Science graduate passionate about programming, creative problem-solving, and collaborative projects.
-                Experienced in academic and practicum work, with strong adaptability and leadership skills.
-                </p>
-            </div>
-            </div>
+  <div id="content" style="display:none;">
+    <canvas id="matrix"></canvas>
+    
+    <div class="dashboard-wrapper">
+      <!-- Top Status Header -->
+      <header class="top-bar">
+        <div class="brand">CYBERPORTFOLIO // ABOUT_ME.SYS</div>
+        <div class="status-info">
+          <span>STATUS: CONNECTED</span>
+          <span>IP: 192.168.1.254</span>
+          <span>SECURITY: LEVEL 1</span>
         </div>
-        <a href="index.html" class="menu-btn">[ Back to Home ]</a>
-    </div>
+      </header>
 
-  <script src="js/script.js"></script>
-  <script src="js/typewriter.js"></script>
+      <!-- Main Center Section -->
+      <main class="main-content">
+        <div class="about-grid">
+          <!-- Profile Image Module -->
+          <div class="profile-card">
+            <img src="myPic.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-meta">
+              <p><span>NAME:</span> AALIYAH N. GUTIERREZ</p>
+              <p><span>PROGRAM:</span> COMPUTER SCIENCE</p>
+              <p><span>CLEARANCE:</span> LEVEL_4</p>
+            </div>
+          </div>
+
+          <!-- Typewriter / Bio Module -->
+          <div class="bio-card">
+            <h2>USER BIOGRAPHY</h2>
+            <div class="typewriter">
+              <p id="about-text">
+Computer Science graduate passionate about programming, creative problem-solving, and collaborative projects. Experienced in academic and practicum work, with strong adaptability and leadership skills.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Navigation Links -->
+        <nav class="inner-nav">
+          <a href="projects.html" class="sub-nav-btn">[ Projects ]</a>
+          <a href="practicum.html" class="sub-nav-btn">[ Practicum ]</a>
+          <a href="experience.html" class="sub-nav-btn">[ Experience ]</a>
+          <a href="student.html" class="sub-nav-btn">[ Student Life ]</a>
+          <a href="certificates.html" class="sub-nav-btn">[ Certificates ]</a>
+        </nav>
+      </main>
+
+      <!-- Bottom Console Log Bar & Return Button -->
+      <footer class="bottom-console about-footer">
+        <p class="console-line">> Biography metadata mounted successfully.</p>
+        <a href="index.html" class="back-link">[ Return to Main Terminal ]</a>
+      </footer>
+    </div>
+  </div>
+
+    <script src="js/typewriter.js"></script>
+  <script src="js/script.js?v=5"></script>
 </body>
 </html>

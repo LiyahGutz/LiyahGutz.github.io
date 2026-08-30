@@ -2,31 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hacker Portfolio - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio - Main Control</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Loader first -->
   <div id="loader">
-    <pre class="loading-text">[ INITIALIZING SYSTEM... ]</pre>
+    <pre class="loading-text">[ INITIALIZING SIMULATION ENVIRONMENT... ]</pre>
   </div>
 
-  <!-- Hidden content until loader finishes -->
   <div id="content" style="display:none;">
     <canvas id="matrix"></canvas>
-    <div class="terminal">
-      <h1 class="glitch" data-text="[ ACCESSING DOSSIER... ]">[ ACCESSING DOSSIER... ]</h1>
-        <div class="menu">
-            <a href="about.html" class="menu-btn">[ About Me ]</a>
-            <a href="projects.html" class="menu-btn">[ Projects ]</a>
-            <a href="practicum.html" class="menu-btn">[ Practicum ]</a>
-            <a href="experience.html" class="menu-btn">[ Experience ]</a>
-            <a href="student.html" class="menu-btn">[ Student Life ]</a>
-            <a href="certificates.html" class="menu-btn">[ Certificates ]</a>
+    
+    <div class="dashboard-wrapper">
+      <!-- Top Status Header -->
+      <header class="top-bar">
+        <div class="brand">CYBERPORTFOLIO</div>
+        <div class="status-info">
+          <span>STATUS: CONNECTED</span>
+          <span>IP: 192.168.1.254</span>
+          <span>SECURITY: LEVEL 1</span>
         </div>
+      </header>
 
+      <!-- Main Center Section -->
+      <main class="main-content">
+        <h1 class="welcome-title">WELCOME TO MY DOSSIER</h1>
+        <p class="subtitle">Select a system module to initialize layout...</p>
+
+        <!-- 2x3 Grid Cards -->
+        <div class="card-grid">
+          <a href="about.html" class="nav-card">
+            <h2>ABOUT ME</h2>
+            <p>Background details, tech stack, and personal profile</p>
+          </a>
+
+          <a href="projects.html" class="nav-card">
+            <h2>PROJECTS</h2>
+            <p>Deployed applications, software repositories, and demos</p>
+          </a>
+
+          <a href="practicum.html" class="nav-card">
+            <h2>PRACTICUM</h2>
+            <p>Field experience, technical training, and lab reports</p>
+          </a>
+
+          <a href="experience.html" class="nav-card">
+            <h2>EXPERIENCE</h2>
+            <p>Professional history, work achievements, and roles</p>
+          </a>
+
+          <a href="student.html" class="nav-card">
+            <h2>STUDENT LIFE</h2>
+            <p>Academic milestones, campus activities, and events</p>
+          </a>
+
+          <a href="certificates.html" class="nav-card">
+            <h2>CERTIFICATES</h2>
+            <p>Validated credentials, awards, and course completions</p>
+          </a>
+        </div>
+      </main>
+
+      <!-- Bottom Console Log Bar -->
+      <footer class="bottom-console">
+        <p class="console-line">> System initialized. Select a module to begin.</p>
+        <p class="console-line">[11:59:00 PM] Establishing secure connection...</p>
+        <p class="console-line">[11:59:01 PM] Connection established.</p>
+      </footer>
     </div>
   </div>
-  <script src="js/script.js"></script>
+
+  <script src="js/script.js?v=4"></script>
 </body>
-</html>
+</html>62

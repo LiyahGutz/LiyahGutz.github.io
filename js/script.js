@@ -2,71 +2,76 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
 
-  const messages = [
-    "[ INITIALIZING SYSTEM... ]",
-    "[ Scanning ports... ]",
-    "[ Decrypting file... ]",
-    "[ Bypassing firewall... ]",
-    "[ Injecting payload... ]",
-    "[ ACCESS GRANTED ]"
-  ];
+  if (loader && content) {
+    setTimeout(() => {
+      loader.style.transition = "opacity 0.6s ease";
+      loader.style.opacity = "0";
 
-  const loadingText = document.querySelector(".loading-text");
-  let i = 0;
+      setTimeout(() => {
+        loader.style.display = "none";
+        content.style.display = "block";
 
-  const interval = setInterval(() => {
-    loadingText.textContent = messages[i];
-    i++;
-    if (i === messages.length) {
-        clearInterval(interval);
-
-        // Add glitch effect before hiding loader
-        loader.classList.add("glitching");
-
-        setTimeout(() => {
-            loader.style.transition = "opacity 0.8s ease";
-            loader.style.opacity = 0;
-            setTimeout(() => {
-            loader.style.display = "none";
-            content.style.display = "block";
-            }, 800);
-        }, 1200); // glitch duration
+        // Trigger typewriter AFTER content is visible
+        if (typeof window.startTypewriter === "function") {
+          window.startTypewriter();
+        }
+      }, 600);
+    }, 800);
+  } else if (content) {
+    content.style.display = "block";
+    if (typeof window.startTypewriter === "function") {
+      window.startTypewriter();
     }
-
-
-  }, 1200);
-});
-
-// Matrix rain background
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "01";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = Array(Math.floor(columns)).fill(1);
-
-function draw() {
-  ctx.fillStyle = "rgba(0,0,0,0.05)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "#0f0";
-  ctx.font = fontSize + "px Courier New";
-  for (let i = 0; i < drops.length; i++) {
-    const text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-      drops[i] = 0;
-    }
-    drops[i]++;
   }
-}
-setInterval(draw, 33);
-
-window.addEventListener("resize", () => {
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
 });
+
+// Canvas Matrix Rain Effect
+const canvas = document.getElementById("matrix");
+
+if (canvas) {
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+  }
+  resizeCanvas();
+
+  const letters = "01";
+  const fontSize = 14;
+  let columns = canvas.width / fontSize;
+  let drops = Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(5, 2, 10, 0.08)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = fontSize + "px Courier New";
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      const yPos = drops[i] * fontSize;
+
+      if (yPos / canvas.height < 0.5) {
+        ctx.fillStyle = "#6a0ded";
+      } else {
+        ctx.fillStyle = "#d800ff";
+      }
+
+      ctx.fillText(text, i * fontSize, yPos);
+
+      if (yPos > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 33);
+
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    columns = canvas.width / fontSize;
+    drops = Array(Math.floor(columns)).fill(1);
+  });
+}

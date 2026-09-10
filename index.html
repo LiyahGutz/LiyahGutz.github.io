@@ -3,76 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Portfolio - Main Control</title>
+  <title>Cyber Portfolio - Main Terminal</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Loader Screen -->
   <div id="loader">
-    <pre class="loading-text">[ INITIALIZING SIMULATION ENVIRONMENT... ]</pre>
+    <pre class="loading-text">[ INITIALIZING SYSTEM TERMINAL... ]</pre>
   </div>
 
+  <!-- Main Terminal Content -->
   <div id="content" style="display:none;">
     <canvas id="matrix"></canvas>
-    
+
     <div class="dashboard-wrapper">
       <!-- Top Status Header -->
       <header class="top-bar">
-        <div class="brand">CYBERPORTFOLIO</div>
+        <div class="brand">CYBERPORTFOLIO // MAIN_TERMINAL.EXE</div>
         <div class="status-info">
-          <span>STATUS: CONNECTED</span>
+          <span>STATUS: ONLINE</span>
           <span>IP: 192.168.1.254</span>
           <span>SECURITY: LEVEL 1</span>
         </div>
       </header>
 
-      <!-- Main Center Section -->
+      <!-- Central Navigation Hub -->
       <main class="main-content">
-        <h1 class="welcome-title">WELCOME TO MY DOSSIER</h1>
-        <p class="subtitle">Select a system module to initialize layout...</p>
+        <h1 class="welcome-title glitch" data-text="[ ACCESSING DOSSIER... ]">[ ACCESSING DOSSIER... ]</h1>
+        <p class="subtitle">Select a sub-system directory to proceed...</p>
 
-        <!-- 2x3 Grid Cards -->
-        <div class="card-grid">
-          <a href="about.html" class="nav-card">
-            <h2>ABOUT ME</h2>
-            <p>Background details, tech stack, and personal profile</p>
+        <!-- Main Directory Grid -->
+        <div class="home-menu-grid">
+          <a href="about.html" class="home-nav-card">
+            <span class="card-num">[ 01 ]</span>
+            <h3>ABOUT ME</h3>
+            <p>Profile summary, core objectives, and background file.</p>
           </a>
 
-          <a href="projects.html" class="nav-card">
-            <h2>PROJECTS</h2>
-            <p>Deployed applications, software repositories, and demos</p>
+          <a href="projects.html" class="home-nav-card">
+            <span class="card-num">[ 02 ]</span>
+            <h3>PROJECTS</h3>
+            <p>Software repositories, game builds, and source code links.</p>
           </a>
 
-          <a href="practicum.html" class="nav-card">
-            <h2>PRACTICUM</h2>
-            <p>Field experience, technical training, and lab reports</p>
+          <a href="skills.html" class="home-nav-card">
+            <span class="card-num">[ 03 ]</span>
+            <h3>SKILLS</h3>
+            <p>Programming languages, database management, and UI/UX tooling.</p>
           </a>
 
-          <a href="experience.html" class="nav-card">
-            <h2>EXPERIENCE</h2>
-            <p>Professional history, work achievements, and roles</p>
+          <a href="practicum.html" class="home-nav-card">
+            <span class="card-num">[ 04 ]</span>
+            <h3>PRACTICUM</h3>
+            <p>Industry training logs at Toshiba Information Equipment Philippines, Inc.</p>
           </a>
 
-          <a href="student.html" class="nav-card">
-            <h2>STUDENT LIFE</h2>
-            <p>Academic milestones, campus activities, and events</p>
+          <a href="student.html" class="home-nav-card">
+            <span class="card-num">[ 06 ]</span>
+            <h3>STUDENT LIFE</h3>
+            <p>Mapúa MCL degree progress, JPCS leadership, and campus media work.</p>
           </a>
 
-          <a href="certificates.html" class="nav-card">
-            <h2>CERTIFICATES</h2>
-            <p>Validated credentials, awards, and course completions</p>
+          <a href="certificates.html" class="home-nav-card full-width">
+            <span class="card-num">[ 07 ]</span>
+            <h3>CERTIFICATES</h3>
+            <p>Professional certifications, training credentials, and AI / Design badges.</p>
           </a>
         </div>
       </main>
 
       <!-- Bottom Console Log Bar -->
       <footer class="bottom-console">
-        <p class="console-line">> System initialized. Select a module to begin.</p>
-        <p class="console-line">[11:59:00 PM] Establishing secure connection...</p>
-        <p class="console-line">[11:59:01 PM] Connection established.</p>
+        <p class="console-line">> Terminal active. Waiting for system selection...</p>
       </footer>
     </div>
   </div>
 
-  <script src="js/script.js?v=4"></script>
+  <script src="js/script.js?v=5"></script>
 </body>
-</html>62
+</html>

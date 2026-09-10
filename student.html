@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio - Student Life</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="loader">
+    <pre class="loading-text">[ ACCESSING ACADEMIC DOSSIER... ]</pre>
+  </div>
+
+  <div id="content" style="display:none;">
+    <canvas id="matrix"></canvas>
+    
+    <div class="dashboard-wrapper">
+      <!-- Top Status Header -->
+      <header class="top-bar">
+        <div class="brand">CYBERPORTFOLIO // ACADEMICS.CFG</div>
+        <div class="status-info">
+          <span>STATUS: CONNECTED</span>
+          <span>IP: 192.168.1.254</span>
+          <span>SECURITY: LEVEL 1</span>
+        </div>
+      </header>
+
+      <!-- Main Center Section -->
+      <main class="main-content">
+        <div class="about-grid">
+          
+          <!-- Left Module: Metadata Panel (Replaces Image) -->
+          <div class="profile-card student-meta-card">
+            <h3 class="meta-title">[ STUDENT_INFO ]</h3>
+            <div class="meta-divider"></div>
+            <div class="profile-meta">
+              <p><span>NAME:</span> AALIYAH GUTIERREZ[cite: 1]</p>
+              <p><span>INSTITUTION:</span> MAPÚA MCL[cite: 1]</p>
+              <p><span>PROGRAM:</span> BS COMPUTER SCIENCE[cite: 1]</p>
+              <p><span>STATUS:</span> EXPECTED 07/2026[cite: 1]</p>
+              <p><span>LOCATION:</span> LAGUNA, PH[cite: 1]</p>
+            </div>
+            <div class="meta-divider"></div>
+            <h3 class="meta-title">[ AFFILIATIONS ]</h3>
+            <div class="profile-meta">
+              <p><span>JPCS MCL:</span> SECRETARY ('23-'24)[cite: 1]</p>
+              <p><span>KAMALAYAN:</span> ILLUSTRATOR[cite: 1]</p>
+              <p><span>ARGO:</span> VECTOR ARTIST[cite: 1]</p>
+            </div>
+          </div>
+
+          <!-- Right Module: Terminal Logs -->
+          <div class="bio-card student-log-card">
+            <h2>ACADEMIC & CAMPUS DOSSIER</h2>
+            
+            <div class="student-scroll-area">
+              <!-- Log 01: Mapua MCL -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ DEGREE_01 ]</span>
+                  <span class="entry-date">EXPECTED 07/2026[cite: 1]</span>
+                </div>
+                <h4>BS Computer Science</h4>
+                <p class="entry-sub">Mapúa Malayan Colleges Laguna — Cabuyao, Laguna[cite: 1]</p>
+                <p class="entry-body">Focusing on software engineering, database management, and interactive systems design[cite: 1]. Active in campus leadership and technical orgs[cite: 1].</p>
+              </div>
+
+              <!-- Log 02: JPCS Leadership -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ ORG_01 ]</span>
+                  <span class="entry-date">2023 - 2026[cite: 1]</span>
+                </div>
+                <h4>Junior Philippine Computer Society (JPCS)</h4>
+                <p class="entry-sub">Mapúa MCL Chapter[cite: 1]</p>
+                <p class="entry-body">Served as Secretary (2023–2024) and active member[cite: 1]. Managed organizational documentation, event scheduling, and team communications.</p>
+              </div>
+
+              <!-- Log 03: Publications & Arts -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ MEDIA_01 ]</span>
+                  <span class="entry-date">2023 - 2025[cite: 1]</span>
+                </div>
+                <h4>KAMALAYAN & ARGO Publications</h4>
+                <p class="entry-sub">Student Media & Creative Arts[cite: 1]</p>
+                <p class="entry-body">Worked as an Illustrator for KAMALAYAN and Vector Artist for ARGO, creating digital media assets and visual layouts[cite: 1].</p>
+              </div>
+
+              <!-- Log 04: LPU Laguna -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ DEGREE_02 ]</span>
+                  <span class="entry-date">GRADUATED 06/2022[cite: 1]</span>
+                </div>
+                <h4>High School Diploma</h4>
+                <p class="entry-sub">Lyceum of the Philippines University - Laguna[cite: 1]</p>
+                <p class="entry-body">Authored thesis research analyzing player purchasing intentions for virtual items in online games[cite: 1].</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Inner Navigation Links -->
+        <nav class="inner-nav">
+          <a href="about.html" class="sub-nav-btn">[ About Me ]</a>
+          <a href="projects.html" class="sub-nav-btn">[ Projects ]</a>
+          <a href="practicum.html" class="sub-nav-btn">[ Practicum ]</a>
+          <a href="certificates.html" class="sub-nav-btn">[ Certificates ]</a>
+          <a href="skills.html" class="sub-nav-btn">[ Skills ]</a>
+        </nav>
+      </main>
+
+      <!-- Bottom Console Log Bar & Return Link -->
+      <footer class="bottom-console about-footer">
+        <p class="console-line">> Academic records verified and loaded.</p>
+        <a href="index.html" class="back-link">[ Return to Main Terminal ]</a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio - Practicum</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div id="loader">
+    <pre class="loading-text">[ LOADING PRACTICUM DOSSIER... ]</pre>
+  </div>
+
+  <div id="content" style="display:none;">
+    <canvas id="matrix"></canvas>
+    
+    <div class="dashboard-wrapper">
+      <!-- Top Status Header -->
+      <header class="top-bar">
+        <div class="brand">CYBERPORTFOLIO // PRACTICUM.SYS</div>
+        <div class="status-info">
+          <span>STATUS: CONNECTED</span>
+          <span>IP: 192.168.1.254</span>
+          <span>SECURITY: LEVEL 1</span>
+        </div>
+      </header>
+
+      <!-- Main Center Section -->
+      <main class="main-content">
+        <div class="about-grid">
+          
+          <!-- Left Module: Logo & Company Metadata Panel -->
+          <div class="profile-card student-meta-card">
+            <!-- Toshiba Logo Container -->
+            <div class="company-logo-frame">
+              <img src="images/toshiba-logo.png" alt="Toshiba Logo" class="company-logo">
+            </div>
+
+            <h3 class="meta-title"><i class="fa-solid fa-building icon-glow"></i> [ COMPANY_INFO ]</h3>
+            <div class="meta-divider"></div>
+            <div class="profile-meta">
+              <p><span>ORGANIZATION:</span> TOSHIBA</p>
+              <p><span>ENTITY:</span> TOSHIBA INFORMATION EQUIPMENT PHILIPPINES, INC.</p>
+              <p><span>ROLE:</span> PRACTICUM TRAINEE / INTERN</p>
+              <p><span>FIELD:</span> COMPUTER SCIENCE</p>
+              <p><span>DURATION:</span> MAY - AUG 2026 (480 HRS)</p>
+            </div>
+            <div class="meta-divider"></div>
+            <h3 class="meta-title"><i class="fa-solid fa-microchip icon-glow"></i> [ TECHNICAL_FOCUS ]</h3>
+            <div class="profile-meta">
+              <p><span>TRACKS:</span> SOFTWARE DEV / IT OPS</p>
+              <p><span>SETTING:</span> ENTERPRISE ENVIRONMENT</p>
+            </div>
+          </div>
+
+          <!-- Right Module: Practicum Terminal Logs -->
+          <div class="bio-card student-log-card">
+            <h2>PRACTICUM & INDUSTRY TRAINING</h2>
+
+            <div class="student-scroll-area">
+              <!-- Log 01: Internship Overview -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ LOG_01 ]</span>
+                  <span class="entry-date">2026</span>
+                </div>
+                <h4><i class="fa-solid fa-briefcase entry-icon"></i> Industry Internship Program</h4>
+                <p class="entry-sub">Toshiba Information Equipment Philippines, Inc.</p>
+                <p class="entry-body">Completed a 480-hour practicum within a global technology and manufacturing enterprise, rotating across multiple departments covering hardware operations, infrastructure, and software development. Project details are withheld in accordance with a signed non-disclosure agreement.</p>
+              </div>
+
+              <!-- Log 02: Core Responsibilities / Tasks -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ LOG_02 ]</span>
+                  <span class="entry-date">RESPONSIBILITIES</span>
+                </div>
+                <h4><i class="fa-solid fa-gears entry-icon"></i> Software Development & System Support</h4>
+                <p class="entry-sub">Full-Stack Development Activities</p>
+                <p class="entry-body">Contributed to the continued development of an internal monitoring dashboard — implementing UI features, data filtering, reporting utilities, and backend query fixes — alongside foundational exposure to hardware maintenance and network operations under professional supervision.</p>
+              </div>
+
+              <!-- Log 03: Skills & Tools Applied -->
+              <div class="dossier-entry">
+                <div class="entry-header">
+                  <span class="entry-tag">[ LOG_03 ]</span>
+                  <span class="entry-date">COMPETENCIES</span>
+                </div>
+                <h4><i class="fa-solid fa-list-check entry-icon"></i> Skill Application & Professional Growth</h4>
+                <p class="entry-sub">Technical & Soft Skills Utilization</p>
+                <p class="entry-body">Strengthened full-stack development skills spanning frontend, backend, and database work, along with PC hardware, operating systems, Linux administration, and networking fundamentals, while building workplace communication, documentation, and presentation skills in a corporate setting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Navigation Links -->
+        <nav class="inner-nav">
+          <a href="about.html" class="sub-nav-btn">[ About Me ]</a>
+          <a href="projects.html" class="sub-nav-btn">[ Projects ]</a>
+          <a href="skills.html" class="sub-nav-btn">[ Skills ]</a>
+          <a href="practicum.html" class="sub-nav-btn">[ Practicum ]</a>
+          <a href="student.html" class="sub-nav-btn">[ Student Life ]</a>
+          <a href="certificates.html" class="sub-nav-btn">[ Certificates ]</a>
+        </nav>
+      </main>
+
+      <!-- Bottom Console Log Bar & Return Link -->
+      <footer class="bottom-console about-footer">
+        <p class="console-line">> Practicum log records retrieved successfully.</p>
+        <a href="index.html" class="back-link">[ Return to Main Terminal ]</a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=5"></script>
+</body>
+</html>

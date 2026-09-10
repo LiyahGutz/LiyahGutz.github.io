@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Portfolio - Projects</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <div id="loader">
-    <pre class="loading-text">[ LOADING REPOSITORY DIRECTORY... ]</pre>
+    <pre class="loading-text">[ ACCESSING PROJECT REPOSITORIES... ]</pre>
   </div>
 
   <div id="content" style="display:none;">
@@ -27,69 +28,95 @@
 
       <!-- Main Center Section -->
       <main class="main-content">
-        <h1 class="welcome-title">PROJECT REPOSITORY</h1>
-        <p class="subtitle">Deployed software applications and source repositories...</p>
+        <h1 class="welcome-title">PROJECT REPOSITORIES & RESEARCH</h1>
+        <p class="subtitle">Software builds, thesis research, and interactive applications...</p>
 
-        <!-- Projects Grid -->
+        <!-- Projects Grid Container -->
         <div class="projects-grid">
-          <!-- Project 1: VibeChance -->
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-tag">[ REPO_01 ]</span>
-              <h3>VibeChance Project</h3>
+          
+          <!-- Project 01: Thesis - ALQMI -->
+          <div class="list-card">
+            <div class="card-meta">
+              <span class="card-tag">[ PROJ_01 ]</span>
+              <span class="card-date">UNDERGRAD THESIS</span>
             </div>
-            <p class="project-desc">Turn-based game that depends on the player's luck. Based on Rock-Paper-Scissors, but this time VIBES</p>
-            <div class="project-footer">
-              <span class="tech-stack">STACK: JS / WEB</span>
-              <a href="https://github.com/LiyahGutz/VibeChance" target="_blank" class="sub-nav-btn">[ View on GitHub ]</a>
-            </div>
-          </div>
-
-          <!-- Project 2: 4 Pics 1 Word Game -->
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-tag">[ REPO_02 ]</span>
-              <h3>4 Pics 1 Word Game</h3>
-            </div>
-            <p class="project-desc">Word-guessing puzzle game implementing core logic algorithms and custom user interface design.</p>
-            <div class="project-footer">
-              <span class="tech-stack">STACK: GAME LOGIC</span>
-              <span class="status-tag">[ COMPLETED ]</span>
+            <h3><i class="fa-solid fa-vr-cardboard entry-icon"></i> ALQMI</h3>
+            <p class="card-institution">Augmented Reality & Computer Vision Android Game</p>
+            <p class="card-desc">An interactive Android-based educational game designed to teach General Chemistry using integrated Augmented Reality (AR) and Computer Vision capabilities.</p>
+            <div class="card-footer">
+              <span class="tech-stack">STACK: AR / CV / ANDROID</span>
+              <span class="status-tag">[ ACTIVE / RESEARCH ]</span>
             </div>
           </div>
 
-          <!-- Project 3: Finance Master -->
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-tag">[ REPO_03 ]</span>
-              <h3>Finance Master Pitch Idea</h3>
+          <!-- Project 02: Dan's Cafe System -->
+          <div class="list-card">
+            <div class="card-meta">
+              <span class="card-tag">[ PROJ_02 ]</span>
+              <span class="card-date">FULL-STACK SYSTEM</span>
             </div>
-            <p class="project-desc">Conceptual fintech solution focused on budgeting analysis and personal financial planning.</p>
-            <div class="project-footer">
-              <span class="tech-stack">STACK: FINTECH / PITCH</span>
-              <span class="status-tag">[ CONCEPT ]</span>
+            <h3><i class="fa-solid fa-mug-hot entry-icon"></i> Dashboard for Dan's Cafe</h3>
+            <p class="card-institution">POS, Inventory & Order Management System</p>
+            <p class="card-desc">A web-based cafe management platform built with ASP.NET featuring real-time transaction history tracking, automated inventory management, ordering workflows, and role-based access control for users and administrators.</p>
+            <div class="card-footer">
+              <span class="tech-stack">STACK: ASP.NET / C# / CSS / T-SQL</span>
+              <a href="https://github.com/LiyahGutz/IT114L-MP-DansCafeOnline" target="_blank" class="status-tag">[ GITHUB REPO ]</a>
             </div>
           </div>
 
-          <!-- Project 4: Placeholder Slot -->
-          <div class="project-card placeholder-card">
-            <div class="project-header">
-              <span class="project-tag">[ REPO_04 ]</span>
-              <h3>[ ENCRYPTED FILE ]</h3>
+          <!-- Project 03: Vibe Chance -->
+          <div class="list-card">
+            <div class="card-meta">
+              <span class="card-tag">[ PROJ_03 ]</span>
+              <span class="card-date">GAME DEV</span>
             </div>
-            <p class="project-desc">Additional project module pending deployment. Check back for source code releases.</p>
-            <div class="project-footer">
-              <span class="tech-stack">STACK: UNKNOWN</span>
-              <span class="status-tag">[ LOCKED ]</span>
+            <h3><i class="fa-solid fa-gamepad entry-icon"></i> Vibe Chance</h3>
+            <p class="card-institution">Turn-Based Chance Game</p>
+            <p class="card-desc">A game inspired by Rock-Paper-Scissors where player choices rely on personality "vibes" (e.g., lunatic, serene, groovy) to beat opposing vibes in a pure chance model.</p>
+            <div class="card-footer">
+              <span class="tech-stack">STACK: C# / OOP</span>
+              <a href="https://github.com/LiyahGutz/VibeChance" target="_blank" class="status-tag">[ GITHUB REPO ]</a>
             </div>
           </div>
+
+          <!-- Project 04: SANKA Pitch Deck -->
+          <div class="list-card">
+            <div class="card-meta">
+              <span class="card-tag">[ PROJ_04 ]</span>
+              <span class="card-date">UI/UX & PITCH DECK</span>
+            </div>
+            <h3><i class="fa-solid fa-bus entry-icon"></i> SANKA</h3>
+            <p class="card-institution">Urban Commuting Mobile App Concept</p>
+            <p class="card-desc">A comprehensive urban transit application concept offering route optimization, seat reservations, digital fare collection, and real-time traffic updates for commuters[cite: 3].</p>
+            <div class="card-footer">
+              <span class="tech-stack">STACK: FIGMA / UI/UX / BRANDING</span>
+              <a href="assets/PitchDeck_V4 Presentation.pdf" target="_blank" class="status-tag">[ VIEW DECK (PDF) ]</a>
+            </div>
+          </div>
+
+          <!-- Project 05: Senior High Thesis Paper -->
+          <div class="list-card">
+            <div class="card-meta">
+              <span class="card-tag">[ PROJ_05 ]</span>
+              <span class="card-date">RESEARCH PAPER</span>
+            </div>
+            <h3><i class="fa-solid fa-chart-pie entry-icon"></i> Virtual Products Purchase Intentions</h3>
+            <p class="card-institution">Quantitative Behavioral Research</p>
+            <p class="card-desc">Investigated senior high school students' intentions in purchasing virtual products within online games, analyzing player spending habits and economic motivations.</p>
+            <div class="card-footer">
+              <span class="tech-stack">FOCUS: DATA ANALYSIS / BEHAVIOR</span>
+              <span class="status-tag">[ PUBLISHED / COMPLETED ]</span>
+            </div>
+          </div>
+
         </div>
 
         <!-- Inner Navigation Links -->
         <nav class="inner-nav">
           <a href="about.html" class="sub-nav-btn">[ About Me ]</a>
+          <a href="projects.html" class="sub-nav-btn">[ Projects ]</a>
+          <a href="skills.html" class="sub-nav-btn">[ Skills ]</a>
           <a href="practicum.html" class="sub-nav-btn">[ Practicum ]</a>
-          <a href="experience.html" class="sub-nav-btn">[ Experience ]</a>
           <a href="student.html" class="sub-nav-btn">[ Student Life ]</a>
           <a href="certificates.html" class="sub-nav-btn">[ Certificates ]</a>
         </nav>
@@ -97,7 +124,7 @@
 
       <!-- Bottom Console Log Bar & Return Link -->
       <footer class="bottom-console about-footer">
-        <p class="console-line">> 3 repository records retrieved.</p>
+        <p class="console-line">> All project entries loaded.</p>
         <a href="index.html" class="back-link">[ Return to Main Terminal ]</a>
       </footer>
     </div>

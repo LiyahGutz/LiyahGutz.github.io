@@ -312,81 +312,343 @@ body::before {
   }
 }
 
-/* Projects Page Grid Layout */
+/* Projects Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 25px auto;
-  text-align: left;
+  margin-bottom: 25px;
 }
 
-.project-card {
-  border: 1px solid #6a0ded;
-  background: rgba(15, 3, 30, 0.85);
-  padding: 18px;
+/* List Card Base */
+.list-card {
+  background: rgba(13, 0, 26, 0.7);
+  border: 1px solid #8a2be2;
+  border-radius: 4px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.25s ease;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
-.project-card:hover {
+.list-card:hover {
   border-color: #d800ff;
-  box-shadow: 0 0 15px rgba(216, 0, 255, 0.3);
-  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(216, 0, 255, 0.4);
 }
 
-.project-header {
-  margin-bottom: 10px;
-}
-
-.project-tag {
-  font-size: 10px;
-  color: #8a2be2;
-  letter-spacing: 1px;
-}
-
-.project-card h3 {
-  font-size: 16px;
-  color: #d800ff;
-  margin-top: 4px;
-}
-
-.project-desc {
-  font-size: 12px;
-  color: #ba55d3;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-.project-footer {
+/* Card Header Meta */
+.card-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px dashed rgba(106, 13, 237, 0.4);
-  padding-top: 10px;
-  font-size: 10px;
-}
-
-.tech-stack {
+  font-size: 0.75rem;
   color: #8a2be2;
+  margin-bottom: 8px;
 }
 
-.status-tag {
+.card-tag {
   color: #d800ff;
   font-weight: bold;
 }
 
-/* Placeholder card styling */
-.placeholder-card {
-  opacity: 0.6;
-  border-style: dashed;
+/* Typography inside Cards */
+.list-card h3 {
+  color: #00ffff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
 }
 
-@media (max-width: 650px) {
+.card-institution {
+  color: #b19ffb;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.card-desc {
+  color: #d1c4e9;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Card Footer & GitHub Button */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(138, 43, 226, 0.3);
+  padding-top: 10px;
+  font-size: 0.75rem;
+}
+
+.tech-stack {
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+.status-tag {
+  color: #00ff66;
+  font-weight: bold;
+}
+
+/* Style for interactive GitHub links */
+.card-footer a.status-tag {
+  color: #d800ff;
+  border: 1px solid #d800ff;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.card-footer a.status-tag:hover {
+  background: #d800ff;
+  color: #0d001a;
+  box-shadow: 0 0 10px #d800ff;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Make the project grid the only scrollable element */
+.projects-grid {
+  flex: 1;
+  overflow-y: auto; /* Enables vertical scrolling inside the grid only */
+  padding-right: 10px; /* Space for the scrollbar */
+  min-height: 0;
+}
+
+/* Optional: Styled custom scrollbar to fit the cyber theme */
+.projects-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 3px;
+}
+
+
+/* Student */
+
+/* Student Page Metadata Left Card */
+.student-meta-card {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.meta-title {
+  font-size: 13px;
+  color: #d800ff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.meta-divider {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #6a0ded;
+  margin: 10px 0;
+}
+
+.student-meta-card .profile-meta p {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Student Page Right Scroll Box */
+.student-log-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-scroll-area {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Custom Scrollbar for Terminal Area */
+.student-scroll-area::-webkit-scrollbar {
+  width: 5px;
+}
+.student-scroll-area::-webkit-scrollbar-track {
+  background: rgba(10, 0, 20, 0.8);
+}
+.student-scroll-area::-webkit-scrollbar-thumb {
+  background: #6a0ded;
+}
+
+/* Dossier Entry Items */
+.dossier-entry {
+  border-bottom: 1px dashed rgba(106, 13, 237, 0.4);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.dossier-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.entry-tag {
+  color: #8a2be2;
+}
+
+.entry-date {
+  color: #d800ff;
+  font-weight: bold;
+}
+
+.dossier-entry h4 {
+  font-size: 15px;
+  color: #d800ff;
+}
+
+.entry-sub {
+  font-size: 11px;
+  color: #8a2be2;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.entry-body {
+  font-size: 12px;
+  color: #ba55d3;
+  line-height: 1.5;
+}
+
+/* Home/Index */
+/* Home Page Menu Grid */
+.home-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto 10px auto;
+  text-align: left;
+}
+
+.home-nav-card {
+  border: 1px solid #6a0ded;
+  background: rgba(15, 3, 30, 0.85);
+  padding: 16px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-nav-card:hover {
+  border-color: #d800ff;
+  box-shadow: 0 0 15px rgba(216, 0, 255, 0.4);
+  transform: translateY(-3px);
+  background: rgba(25, 5, 45, 0.9);
+}
+
+.card-num {
+  font-size: 10px;
+  color: #8a2be2;
+  margin-bottom: 5px;
+}
+
+.home-nav-card h3 {
+  font-size: 14px;
+  color: #d800ff;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.home-nav-card p {
+  font-size: 11px;
+  color: #ba55d3;
+  line-height: 1.4;
+}
+
+.full-width {
+  grid-column: span 3;
+}
+
+/* Responsive Grid */
+@media (max-width: 800px) {
+  .home-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .full-width {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .home-menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+/* Skills */
+/* Cyber Neon Icon Styling */
+.icon-glow {
+  color: #d800ff;
+  font-size: 13px;
+  margin-right: 4px;
+  text-shadow: 0 0 6px rgba(216, 0, 255, 0.7);
+}
+
+.profile-meta i {
+  color: #8a2be2;
+  font-size: 11px;
+  margin-right: 4px;
+  width: 14px;
+  text-align: center;
+}
+
+.entry-icon {
+  color: #d800ff;
+  font-size: 14px;
+  margin-right: 8px;
+  text-shadow: 0 0 8px rgba(216, 0, 255, 0.6);
+}
+
+/* Practicum */
+/* Company Logo Styling for Practicum Page */
+.company-logo-frame {
+  width: 100%;
+  padding: 12px;
+  background: rgba(10, 2, 20, 0.9);
+  border: 1px solid #6a0ded;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(106, 13, 237, 0.3);
+}
+
+.company-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 45px;
+  object-fit: contain;
+  /* Optional neon drop-shadow to blend with purple terminal aesthetic */
+  filter: drop-shadow(0 0 6px rgba(255, 0, 50, 0.5));
 }
